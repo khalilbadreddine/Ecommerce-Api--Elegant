@@ -224,7 +224,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-For support, email support@elegant.com or join our Slack channel.
+For support, email khalilbadre5@gmail.com or join our Slack channel.
 
 ## 🙏 Acknowledgments
 
