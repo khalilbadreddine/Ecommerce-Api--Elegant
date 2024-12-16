@@ -19,7 +19,12 @@ connectDB();
 
 // Middleware
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: "http://localhost:5173", // Replace with your frontend URL
+    credentials: true, // Allow cookies/credentials
+  })
+);
 app.use(helmet());
 
 // Rate limiting
@@ -37,6 +42,10 @@ app.use('/api/cart', require('./routes/cartRoutes'));
 app.use('/api/categories', require('./routes/categoryRoutes'));
 app.use('/api/payments', require('./routes/paymentRoutes'));
 app.use('/api/wishlist', require('./routes/wishlistRoutes')); // Add the wishlist route
+
+
+//admin routes
+app.use('/api/admin', require('./routes/adminRoutes'));
 
 // Error Handling Middleware
 app.use(errorHandler);
